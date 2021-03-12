@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "name": "server-async-app",
+  "version": "1.0.0",
+  "private": "true",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dr-Khalilov/server-async-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dr-Khalilov/server-async-app/issues"
+  },
+  "homepage": "https://github.com/Dr-Khalilov/server-async-app#readme",
+  "description": ""
+}

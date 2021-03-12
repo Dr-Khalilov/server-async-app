@@ -1,21 +1,16 @@
-async function returnPrim () {
-   primitive  = [false, true, 'string', 12, BigInt(234234234234)]
-  return await primitive
-}
+const http = require('http')
 
-async function test () {
-  return await returnPrim()
-}
+const hostname = '127.0.0.1'
+const port = 3000
+let reqCount = 0
 
-const p1 = test().then(console.log)
+const server = http.createServer((req, res) => {
+  res.statusCode = 200
+  console.log(reqCount++)
+  res.setHeader('Content-Type', 'text/plain')
+  res.end(`Hello World ${reqCount}`)
+})
 
-
-function test2 () {
-  return p2 = new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve(100)
-    }, 1000)
-  })
-}
-
-test2().then(console.log)
+server.listen(port, hostname, () => {
+  console.log(`Server running at http://${hostname}:${port}/`)
+})
